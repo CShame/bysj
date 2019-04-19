@@ -1,9 +1,13 @@
 {
-  "name": "app",
+  "name": "MyApp",
   "integrations": {
+    "gulp": {},
     "cordova": {}
   },
   "type": "ionic1",
+  "gulpStartupTasks": [
+    "watch"
+  ],
   "watchPatterns": [
     "scss/**/*",
     "www/**/*",

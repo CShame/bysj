@@ -1,0 +1,20 @@
+<ion-view>
+    <ion-nav-title>注册</ion-nav-title>
+    <ion-content class='register'>
+        <form class="register_form" name="registerform" novalidate ng-submit="register(registerform.$valid)">
+            <input type="text" id="inputaccount" placeholder="请输入用户名" ng-model='user.userAccount' name="userAccount" required/>
+            <input type="password" id="inputpassword" placeholder="请输入密码" ng-model='user.password' name="password" required/>
+            <input type="password" id="inputpassword2" placeholder="请确认密码" ng-model='user.password2' name="password2" required/>
+            <input type="text" id="inputname" placeholder="请输入昵称" ng-model='user.name' name="name" required/>
+
+            <p>填写联系方式后，将方便我们为您提供更好的服务</p>
+
+            <input type="number" id="inputqq" placeholder="请输入QQ" ng-model='user.qq' name="qq" required/>
+            <input type="tel" id="inputtel" placeholder="请输入电话" ng-model='user.tel' name="tel" required/>
+            <input type="text" id="inputtissue" placeholder="请输入组织或公司名称" ng-model='user.tissue' name="tissue" required/>
+            
+            <input type="submit" class="button button-block" id="submit" value="注册" />
+        
+        </form>
+    </ion-content>
+</ion-view>

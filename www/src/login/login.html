@@ -1,0 +1,37 @@
+<ion-view hide-nav-bar="true">
+    <ion-content class="loginPage" ng-style="pageStyle.bacImgsStyle" id="loginContent" delegate-handle="loginScroll">
+        <div class="loginContainer">
+            <div class="col login_header">
+              <div class="text-center">
+                <img class="hide-keyboard-open" id="loginImg" ng-src="asset/img/logo.png"/>
+              </div>
+            </div>
+            <div class="col login_input">
+                <form class="login_form" name="loginform" novalidate ng-submit="loginIn(loginform.$valid)">
+                  <!--账号密码登录-->
+                    <div class="list" ng-show="loginType == 0">
+                        <label class="item item-input">
+                            <i class="icon"><img src='asset/img/login/industryChoose/mima.png' style="width:18px"/></i>
+                            <input type="text" id="inputname" placeholder="用户名"
+                                   ng-model='user.UserAccount' name="username" required/>
+                        </label>
+                        <label class="item item-input">
+                            <i class="icon"><img src='asset/img/login/industryChoose/yonghum.png' style="width:18px"/></i>
+                            <input type="password" placeholder="密码"
+                                   ng-model="user.Password" name="password" required />
+                        </label>
+                    </div>
+                    <input type="submit" class="button button-block" id="submit" ng-style="pageStyle.submitStyle" value="登录" />
+                
+                    <div class="row login-type">
+                      <div class="col text-center" ng-click="registerUser()">注册账号</div>
+                    </div>
+                  </form>
+            </div>
+
+            <div class="col login_footer text-center">
+              <p>create by hys@2019</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

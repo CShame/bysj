@@ -1,0 +1,46 @@
+ion-header-bar {
+    background-color: #1fb5ff;
+    border-width: 0 !important;
+}
+
+[nav-bar-transition="android"] [nav-bar="active"] .bar{
+    background-color: #1fb5ff;
+}
+
+/*后退按钮颜色*/
+.back-button > i {
+    color: white;
+}
+  
+.nav-bar-title{
+    color: white;
+}
+
+.title_icon {
+    color: white !important;
+}
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    /* placeholder颜色  */
+    color: #aab2bd;
+    /* placeholder字体大小  */
+    font-size: 12px;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    /* placeholder颜色  */
+    color: #aab2bd;
+    /* placeholder字体大小  */
+    font-size: 12px;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    /* placeholder颜色  */
+    color: #aab2bd;
+    /* placeholder字体大小  */
+    font-size: 12px;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    /* placeholder颜色  */
+    color: #aab2bd;
+    /* placeholder字体大小  */
+    font-size: 12px;
+}
