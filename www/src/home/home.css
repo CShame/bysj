@@ -24,6 +24,7 @@
     background: #fff;
     padding: 10px;
     display: flex;
+    margin-bottom: 1px;
 }
 
 .home .each-action>img{
@@ -46,12 +47,30 @@
 
 .home .each-action .right .time{
     font-size: 10px;
+}
+
+.home .each-action .right .time1{
+    color: #25d197;
+}
+
+.home .each-action .right .time2{
+    color: #f88242;
+}
+
+.home .each-action .right .time label{
     color: #777;
 }
+
 
 .home .each-action .right .address{
     font-size: 10px;
     color: #777;
+}
+
+.home .each-action .right .address i{
+    font-size: 13px;
+    padding-right: 5px;
+    color: #999;
 }
 
 .home .each-action .right .type{

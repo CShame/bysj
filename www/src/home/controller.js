@@ -8,7 +8,8 @@ angular.module('starter.controllers')
         ]
 
         $scope.actionList = [
-            {name:'测试'}
+            {name:'测试',startTime:'2019-04-22 11:47',endTime:'2019-04-22 15:50',position:'山的那边海的那边',type:'聚会',img:''},
+            {name:'长沙理工大学考研讲座',startTime:'2019-05-22 09:00',endTime:'2019-05-22 11:00',position:'综合楼A303',type:'讲座',img:''}
         ]
 
         /*管理slide*/

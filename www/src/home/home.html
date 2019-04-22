@@ -15,15 +15,14 @@
 
 
         <div class='action-list' ng-if='actionList && actionList.length>0'>
-            <div class='each-action'>
+            <div class='each-action' ng-repeat="data in actionList">
                 <img src='asset/img/bg.png'/>
                 <div class='right'>
-                    <p class='title'>测试</p>
-                    <p class='time'>开始时间：2019-04-22 11:47</p>
-                    <p class='time'>结束时间：2019-04-22 15:47</p>
-                    <p class='address'>三号会议室</p>
-
-                    <label class='type'>类型</label>
+                    <p class='title'>{{data.name}}</p>
+                    <p class='time time1'>开始时间：<label>{{data.startTime}}</label></p>
+                    <p class='time time2'>结束时间：<label>{{data.endTime}}</label></p>
+                    <p class='address'><i class="icon ion-location"></i>{{data.position}}</p>
+                    <label class='type'>{{data.type}}</label>
                 </div>
             </div>
         </div>
