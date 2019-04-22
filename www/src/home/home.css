@@ -1,0 +1,62 @@
+.home{
+    background: #f2f5f7;
+}
+
+.home .slide-bar{
+    height: 40px;
+    width: 100%;
+    background-color: #DEE7EF;
+}
+
+.home .not-found{
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 40px;
+}
+
+.home .not-found p{
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.home .each-action{
+    background: #fff;
+    padding: 10px;
+    display: flex;
+}
+
+.home .each-action>img{
+    height: 100px;
+    width: 130px;
+}
+
+.home .each-action .right{
+    flex: 1;
+    margin-left: 10px;
+}
+
+.home .each-action .right>p{
+    margin: 0;
+}
+
+.home .each-action .right .title{
+    font-size: 14px;
+}
+
+.home .each-action .right .time{
+    font-size: 10px;
+    color: #777;
+}
+
+.home .each-action .right .address{
+    font-size: 10px;
+    color: #777;
+}
+
+.home .each-action .right .type{
+    color: #fff;
+    background: #1fb5ff;
+    font-size: 10px;
+    padding: 3px 5px 1px;
+}

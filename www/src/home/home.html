@@ -1,6 +1,33 @@
 <ion-view>
     <ion-nav-title>Home</ion-nav-title>
     <ion-content class='home'>
-        
+        <div class='slide-bar'>
+            <slide-list slide-list="navList" change-slide="changeSlide(id)"></slide-list>
+        </div>
+
+        <div class='not-found' ng-if='!actionList || actionList.length==0'>
+            <img src='asset/img/no.png'/>
+            <p>哎呀，您还没有创建活动</p>
+
+            <button class='button button-calm'>点我创建活动</button>
+            <button class='button button-energized' ng-click='goAbout()'>查看基础流程</button>
+        </div>
+
+
+        <div class='action-list' ng-if='actionList && actionList.length>0'>
+            <div class='each-action'>
+                <img src='asset/img/bg.png'/>
+                <div class='right'>
+                    <p class='title'>测试</p>
+                    <p class='time'>开始时间：2019-04-22 11:47</p>
+                    <p class='time'>结束时间：2019-04-22 15:47</p>
+                    <p class='address'>三号会议室</p>
+
+                    <label class='type'>类型</label>
+                </div>
+            </div>
+        </div>
+
+
     </ion-content>
 </ion-view>

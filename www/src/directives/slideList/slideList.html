@@ -1,0 +1,13 @@
+<div class="slide_list_dt">
+  <ul>
+    <li ng-repeat="slide in slideList track by $index">
+      <button ng-click="tip_line_run($index)" ng-class="{'active':currentIndex===$index }">{{slide.name}}</button>
+    </li>
+  </ul>
+
+  <div class="tip_container">
+    <p ng-repeat="line in slideList track by $index" id="{{$index?'':id}}" ng-class="{'tip_line':$index==0}">
+      <span ng-if="$index==0" class="tip_line_small"></span>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.about-page{
+    background: rgba(0,0,0,0.8);
+}
+
+.about-page .title{
+    color: chocolate;
+    font-size: 12px;
+    text-align: center;
+    margin: 20px;
+}
+
+.about-page .step{
+    background: #fff;
+    width: 80%;
+    height: 70px;
+    border-radius: 35px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.about-page .step .num{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 50px;
+    margin: 10px;
+    box-shadow: 4px 4px 3px #bbb;
+}
+
+.about-page .step .sub-title{
+    line-height: 70px;
+}
+
+.about-page .step1{
+    margin-left: 10px;
+}
+.about-page .step1 .num{
+    background: linear-gradient(#83AE2C, #478729);
+}
+
+.about-page .step2{
+    margin-left: 18%;
+}
+.about-page .step2 .num{
+    background: linear-gradient(#0083C9, #0066A4);
+}
+
+.about-page .step3{
+    margin-left: 10px;
+}
+.about-page .step3 .num{
+    background: linear-gradient(#F0882C, #F27C24);
+
+}
+
+
+.about-page .step4{
+    margin-left: 18%;
+}
+.about-page .step4 .num{
+    background: linear-gradient(#DD2190, #8A1465);
+
+}

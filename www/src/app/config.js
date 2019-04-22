@@ -6,26 +6,14 @@ angular.module('starter.config')
   .config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-    // setup an abstract state for the tabs directive
+      // setup an abstract state for the tabs directive
       .state('tab', {
-      url: '/tab',
-      abstract: true,
-      templateUrl: 'src/templates/tabs.html'
-    })
-  
-    // Each tab has its own nav history stack:
-  
-    .state('tab.dash', {
-      url: '/dash',
-      views: {
-        'tab-dash': {
-          templateUrl: 'src/templates/tab-dash.html',
-          controller: 'DashCtrl'
-        }
-      }
-    })
-  
-    .state('tab.chats', {
+        url: '/tab',
+        abstract: true,
+        templateUrl: 'src/templates/tabs.html'
+      })
+
+      .state('tab.chats', {
         url: '/chats',
         views: {
           'tab-chats': {
@@ -43,18 +31,8 @@ angular.module('starter.config')
           }
         }
       })
-  
-    .state('tab.account', {
-      url: '/account',
-      views: {
-        'tab-account': {
-          templateUrl: 'src/templates/tab-account.html',
-          controller: 'AccountCtrl'
-        }
-      }
-    })
-    
-    .state('tab.home', {
+
+      .state('tab.home', {
         url: '/home',
         views: {
           'tab-home': {
@@ -63,15 +41,36 @@ angular.module('starter.config')
           }
         }
       })
-    ;
+
+      .state('tab.about', {
+        url: '/about',
+        views: {
+          'tab-home': {
+            templateUrl: 'src/about/about.html',
+            controller: 'AboutCtrl'
+          }
+        }
+      })
+
+
+      .state('tab.person', {
+        url: '/person',
+        views: {
+          'tab-person': {
+            templateUrl: 'src/person/person.html',
+            controller: 'PersonCtrl'
+          }
+        }
+      })
+      ;
 
 
     var userInfo = angular.fromJson(window.localStorage.getItem('userInfo'));
 
     if (userInfo != null) {
-        $urlRouterProvider.otherwise('/tab/home');
+      $urlRouterProvider.otherwise('/tab/home');
     } else {
       $urlRouterProvider.otherwise('/login');
     }
   }])
-;
+  ;

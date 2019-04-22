@@ -289,7 +289,35 @@ angular.module('starter.services', [])
   }
 }])
 
+.factory('setComponent', [function () {
+  var i = 0;
 
+  function getKey() {
+    i++;
+    return 'key' + i;
+  }
 
+  return {
+    /*
+     * list Array :源数组
+     * child Array :需遍历的子属性集合
+     * */
+    setCp: function (list, child) {
+      angular.forEach(list, function (data) {
+        data.ComponentID = getKey();
+        if (angular.isArray(child)) {
+          for (var i = 0; i < child.length; i++) {
+            if (!!data[child[i]]) {
+              for (var j = 0; j < data[child[i]].length; j++)
+                data[child[i]][j].ComponentID = getKey();
+            }
+          }
+        }
+      });
+      return list;
+    },
+    getUnique: getKey
+  }
+}])
 
 ;

@@ -1,0 +1,78 @@
+/*告警tab指令Css*/
+.slide_list_dt{
+  z-index: 10;
+  height: 100%;
+}
+
+.base-sun .slide_list_dt{
+  background-color: #DEE7EF;
+}
+
+.base-luna .slide_list_dt{
+  background-color: #242627;
+}
+
+
+.slide_list_dt>ul{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.slide_list_dt .tip_container{
+  display: flex;
+  flex-direction: row;
+}
+
+.slide_list_dt>ul>li{
+  flex: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.slide_list_dt  button{
+  height:100%;
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+  width: 60%;
+  white-space: nowrap;
+}
+
+.base-sun .slide_list_dt  button{
+  color: rgba(34,34,34,0.7);
+}
+
+.base-luna .slide_list_dt  button{
+  color: rgba(255,255,255,0.7);
+}
+
+
+
+.slide_list_dt  button.active{
+  /* font-size: 16px; */
+  color: #1FB5FF;
+}
+
+.slide_list_dt .tip_container>p{
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.slide_list_dt .tip_container>.tip_line{
+  position: relative;
+  left:0;
+  height: 2px;
+  text-align: center;
+}
+
+.slide_list_dt .tip_container .tip_line_small{
+  display: block;
+  height: 2px;
+  width: 60%;
+  background-color: #1FB5FF;
+  margin: -2px auto;
+}

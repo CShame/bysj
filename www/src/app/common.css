@@ -1,14 +1,14 @@
-ion-header-bar {
+/* ion-header-bar {
     background-color: #1fb5ff;
     border-width: 0 !important;
 }
 
 [nav-bar-transition="android"] [nav-bar="active"] .bar{
     background-color: #1fb5ff;
-}
+} */
 
 /*后退按钮颜色*/
-.back-button > i {
+/* .back-button > i {
     color: white;
 }
   
@@ -18,6 +18,11 @@ ion-header-bar {
 
 .title_icon {
     color: white !important;
+} */
+
+.tabs{
+    border-top: 1px solid #d9dee2 !important;
+    background-image: none;
 }
 
 input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
