@@ -1,11 +1,17 @@
 angular.module('starter.services')
 .factory('cameraService', ['MemoryFactory',function (MemoryFactory) {
     return {
-      modifyAvatar: function (source, success, failure) {
+      /**
+       * options
+       *  type: 1 or 2
+       *  width:
+       *  height:
+       */
+      modifyAvatar: function (options, success, failure) {
         var pictureSource, destinationType;
         pictureSource = navigator.camera.PictureSourceType;
         destinationType = navigator.camera.DestinationType;
-        if (source == 1) {
+        if (options.type == 1) {
           getLibrary();
         } else {
           getCamera();
@@ -18,8 +24,8 @@ angular.module('starter.services')
               destinationType: destinationType.FILE_URI,
               sourceType: pictureSource.CAMERA,
               allowEdit: true,
-              targetHeight: 180,
-              targetWidth: 180
+              targetWidth: options.width || 360,
+              targetHeight: options.height || 360
             }
           );
         }
@@ -31,8 +37,8 @@ angular.module('starter.services')
               destinationType: destinationType.FILE_URI,
               sourceType: pictureSource.PHOTOLIBRARY,
               allowEdit: true,// todo:看下用户反响
-              targetWidth: 180,
-              targetHeight: 180
+              targetWidth: options.width || 360,
+              targetHeight: options.height || 360
             }
           );
         }

@@ -33,6 +33,19 @@ angular.module('starter.config')
         }
       })
 
+      .state('tab.actionDetail', {
+        url: '/actionDetail',
+        params:{
+          action:null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/actionDetail/actiondetail.html',
+            controller: 'ActionDetailCtrl'
+          }
+        }
+      })
+
 
       .state('tab.person', {
         url: '/person',

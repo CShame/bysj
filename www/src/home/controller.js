@@ -14,16 +14,18 @@ angular.module('starter.controllers')
 
         init();
         function init(){
-            getActionList();
+            $scope.actionList = getActionList();
         }
 
         function getActionList() {
-            $scope.actionList = homeService.getActionList();
+           return homeService.getActionList();
         }
 
         /*管理slide*/
         $scope.changeSlide = function (id) {
             console.log(id);
+            var nowDate = new Date().getTime();
+            var list = getActionList();
             $scope.navList.forEach(function (element) {
                 if (id == element.id) {
                     element.acticved = true;
@@ -31,12 +33,36 @@ angular.module('starter.controllers')
                     element.acticved = false;
                 }
             });
+
+            if(id === 0){           // 全部显示
+                $scope.actionList = list;
+            } else if(id === 1){    // 显示报名中的
+                for(var i=list.length -1; i>=0; i--){
+                    if(nowDate > new Date(list[i].endTime).getTime()){
+                        list.splice(i,1);
+                    }
+                }
+                $scope.actionList = list;
+            } else if(id ===2){     // 显示报名结束的
+                for(var i=list.length -1; i>=0; i--){
+                    if(nowDate <= new Date(list[i].endTime).getTime()){
+                        list.splice(i,1);
+                    }
+                }
+                $scope.actionList = list;
+            }
         };
 
+        $scope.goCreate = function(){
+            $state.go('tab.create');
+        }
 
         $scope.goAbout = function () {
             $state.go('tab.about');
         }
 
+        $scope.goDetail = function(data) {
+            $state.go('tab.actionDetail',{action:data});
+        }
 
     }]);
