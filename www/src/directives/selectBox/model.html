@@ -1,0 +1,15 @@
+<ion-modal-view  class="dir-model-select-box" ng-click="closeModel()">
+  <div class="select-title text-center">{{options.title || "请选择"}}</div>
+    <ion-scroll class="selectArea" delegate-handle="scorllHandler">
+      <ul class="select-options">
+        <li class="select-option" ng-init="itemId = $index"
+              ng-class="{selectedOption:selectId == itemId,unSelectedOption:selectId != itemId,isInstall:option.Mark == '已安装'}"
+            ng-repeat="option in options.list track by $index"
+            ng-click="seletedItem($index)" alt="">
+          {{option[options.attrName] || option}}
+          <i class="ion-android-radio-button-on"  id="{{itemId}}"></i>
+        </li>
+      </ul>
+    </ion-scroll>
+  <div class="bottom"></div>
+</ion-modal-view>

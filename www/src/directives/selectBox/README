@@ -1,0 +1,27 @@
+
+  功能： 自定义下拉选择框
+  参数：options：         <类型：obj>   双向绑定的数据
+           属性：list     <类型：array> (可以是对象数组，可以是普通数组)
+           属性：index    <类型: int> 选中第几个元素，默认0
+           属性：title    <类型：string>（头部提示，默认“请选择”）
+           属性：attrNmae <类型: string>如果list是对象数组，则要传下拉框中要显示的属性名
+           属性：value    <类型：obj或string>可通过传value来默认选择下拉框中与value相同的选项
+
+   example:
+    html : <select-box options = "dataList"></select-box>
+
+     js  :
+      当下拉为普通数组时
+        dataList = {
+          list : [1,2,3],                                                                                         ---(必写)
+          title : "请选择数据",                                                                                   ---(可不写)
+          index : 0                                                                                               ---(可不写)
+         };
+
+      当下拉为对象数组时(此时默认选择第二个)
+        $scope.dataList = {
+          list : [{name:"1111"},{name:"2222"},{name:"3333"},{name:"4444"},{name:"5"},{name:"6"},{name:"7"}],      ---(必写)
+          attrName : "name",                                                                                      ---(必写)
+          title : "请选择数据"                                                                                    ---(可不写)
+          value : {name:"2222"}                                                                                   ---(可不写)
+        };

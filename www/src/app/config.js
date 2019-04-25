@@ -13,25 +13,6 @@ angular.module('starter.config')
         templateUrl: 'src/templates/tabs.html'
       })
 
-      .state('tab.chats', {
-        url: '/chats',
-        views: {
-          'tab-chats': {
-            templateUrl: 'src/templates/tab-chats.html',
-            controller: 'ChatsCtrl'
-          }
-        }
-      })
-      .state('tab.chat-detail', {
-        url: '/chats/:chatId',
-        views: {
-          'tab-chats': {
-            templateUrl: 'src/templates/chat-detail.html',
-            controller: 'ChatDetailCtrl'
-          }
-        }
-      })
-
       .state('tab.home', {
         url: '/home',
         views: {
@@ -59,6 +40,16 @@ angular.module('starter.config')
           'tab-person': {
             templateUrl: 'src/person/person.html',
             controller: 'PersonCtrl'
+          }
+        }
+      })
+
+      .state('tab.create', {
+        url: '/create',
+        views: {
+          'tab-create': {
+            templateUrl: 'src/create/create.html',
+            controller: 'CreateCtrl'
           }
         }
       })

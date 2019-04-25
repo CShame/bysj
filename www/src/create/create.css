@@ -1,0 +1,69 @@
+.create{
+
+}
+
+.create .bg{
+    position: relative;
+    height: 170px;
+    width: 100%;
+}
+
+.create .bg img{
+    height: 170px;
+    width: 100%;
+}
+
+.create .bg .change-img{
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    width: 80px;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 32px;
+}
+
+.all-content{
+    padding: 5px 10px;
+}
+
+.all-content .each-item{
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.all-content .each-item span{
+    font-size: 12px;
+}
+
+.all-content .each-item>input{
+    margin-left: 8px;
+    height: 39px;
+    flex: 1;
+}
+
+.all-content .each-item select-box{
+    flex: 1;
+    padding-left: 8px;
+}
+
+.all-content .each-item .bt{
+    flex: 1;
+}
+
+.all-content .each-item .bt>hr{
+    
+}
+
+.all-content .each-item .bt>input{
+    margin-left: 8px;
+    height: 39px;
+    width: 45%;
+    float: left;
+    padding: 0;
+}
+
