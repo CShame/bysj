@@ -16,7 +16,8 @@
 
         <div class='action-list' ng-if='actionList && actionList.length>0'>
             <div class='each-action' ng-repeat="data in actionList track by $index" ng-click='goDetail(data)'>
-                <img ng-src='{{data.img}}'/>
+                <!-- <img ng-src='{{data.img}}'/> -->
+                <div class='img' ng-style="{'background-image':'url('+data.img+')'}"></div>
                 <div class='right'>
                     <p class='title'>{{data.name}}</p>
                     <p class='time time1'>开始时间：<label>{{data.startTime}}</label></p>
