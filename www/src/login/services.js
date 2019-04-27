@@ -12,7 +12,8 @@ angular.module('starter.services')
       name: '何玉霜',
       tel: '13812345678',
       qq: '626778249',
-      tissue: '长沙理工大学'
+      tissue: '长沙理工大学',
+      img:'asset/img/default.png'
     }
 
     var userList = [];
@@ -64,6 +65,7 @@ angular.module('starter.services')
 
     function register(user) {
       var def = $q.defer();
+      user.img = 'asset/img/default.png';
       MemoryFactory.setCurrentUserInfo(user, { isRoot: true, isCache: true, key: "userInfo" });
       userList.push(user);
       CacheFactory.save('userList', userList);

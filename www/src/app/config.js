@@ -72,7 +72,44 @@ angular.module('starter.config')
         }
       })
 
+      .state('tab.participant', {
+        url: '/participant',
+        params: {
+          actionId: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/participant/participant.html',
+            controller: 'ParticipantCtrl'
+          }
+        }
+      })
 
+      .state('tab.attendance', {
+        url: '/attendance',
+        params: {
+          actionId: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/attendance/attendance.html',
+            controller: 'AttendanceCtrl'
+          }
+        }
+      })
+
+      .state('tab.table', {
+        url: '/table',
+        params: {
+          actionId: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/table/table.html',
+            controller: 'TableCtrl'
+          }
+        }
+      })
 
       .state('tab.person', {
         url: '/person',

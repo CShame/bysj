@@ -32,6 +32,17 @@ angular.module('starter.services')
             CacheFactory.save('actionList', actionList);
         }
 
+        function getActionById(id){
+            var action = null;
+            for(var i=0; i<actionList.length;i++){
+                if(id === actionList[i].actionId){
+                    action = actionList[i];
+                    break;
+                }
+            }
+            return action;
+        }
+
 
         function getTypeList() {
             return typeList;
@@ -41,7 +52,8 @@ angular.module('starter.services')
             getActionList: getActionList,
             addAction: addAction,
             eidtAction: eidtAction,
-            getTypeList: getTypeList
+            getTypeList: getTypeList,
+            getActionById: getActionById
         }
 
 

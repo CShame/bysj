@@ -1,0 +1,28 @@
+<ion-view>
+    <ion-nav-title>参与人</ion-nav-title>
+    <ion-content class='participant-view'>
+        <div class="list">
+            <div class='each' ng-repeat="data in userList">
+                <div class='item' ng-click='showOrHide(data)'>
+                    <div class='left'>
+                        <div class='img' ng-style="{'background-image':'url('+data.img+')'}"></div>
+                    </div>
+                    <div class='middle'>
+                        <p>{{data.name}}</p>
+                        <p>签到时间：2019-05-06:12:00</p>
+                    </div>
+                    <div class='right'>
+                        <i class="icon ion-ios-arrow-right"></i>
+                    </div>
+                </div>
+                <div class='detail' ng-show="data.showDetail">
+                    <p>姓 名：{{data.name}}</p>
+                    <p>电 话：{{data.tel}}</p>
+                    <p>q&nbsp;&nbsp;&nbsp;&nbsp;q：{{data.qq}}</p>
+                    <p>单位名称：{{data.tissue}}</p>
+                    <p>备注：{{data.remark}}</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

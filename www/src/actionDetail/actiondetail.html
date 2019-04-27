@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div class='title'>筹备/签到</div>
+        <div class='title'>筹备/编辑</div>
         <div class='fp row'>
             <div class='each col col-25 text-center' ng-click="goEdit()">
                 <img src='asset/img/action/edit.png'>
@@ -23,9 +23,23 @@
                 <img src='asset/img/action/search.png'>
                 <p>活动预览</p>
             </div>
+        </div>
+        <div class='title'>签到/查看</div>
+        <div class='fp row'>
             <div class='each col col-25 text-center' ng-click="goParticipant()">
                 <img src='asset/img/action/personal.png'>
                 <p>参与人</p>
+            </div>
+            <div class='each col col-25 text-center' ng-click="goAttendance()">
+                <img src='asset/img/action/attendance.png'>
+                <p>签到</p>
+            </div>
+        </div>
+        <div class='title'>统筹/分析</div>
+        <div class='fp row'>
+            <div class='each col col-25 text-center' ng-click="goTable()">
+                <img src='asset/img/action/table.png'>
+                <p>报表分析</p>
             </div>
         </div>
     </ion-content>
