@@ -57,8 +57,8 @@ angular.module('starter.controllers')
             $state.go('tab.create');
         }
 
-        $scope.goAbout = function () {
-            $state.go('tab.about');
+        $scope.goHelp = function () {
+            $state.go('tab.help');
         }
 
         $scope.goDetail = function(data) {

@@ -1,0 +1,55 @@
+<ion-view>
+    <ion-nav-title>活动编辑</ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button class="button" ng-click="save()">
+            更新
+        </button>
+    </ion-nav-buttons>
+    <ion-content class='create'>
+        <div class='bg'>
+            <img ng-src={{action.img}} />
+            <div class='change-img' ng-click="changeImg()">更换封面</div>
+        </div>
+        <div class='action-content'>
+            <ul class="all-content">
+                <li class="each-item">
+                    <span>活动名称：</span>
+                    <input type='text' placeholder="请输入活动名称" ng-model="action.name" />
+                </li>
+                <li class="each-item">
+                    <span>主办单位：</span>
+                    <input type='text' placeholder="您的单位名称" ng-model="action.host" />
+                </li>
+                <li class="each-item">
+                    <span>联系电话：</span>
+                    <input type='tel' placeholder="您的电话号码" ng-model="action.tel" />
+                </li>
+                <li class="each-item">
+                    <span>活动类型：</span>
+                    <select-box options='typeList'></select-box>
+                </li>
+                <li class="each-item">
+                    <span>活动开始时间：</span>
+                    <time-picker title="请选择日期" yearstart="2018" yearend="2030" loadLazy="true" load-date-time="action.startTime"
+                        time-picker-result="action.startTime"></time-picker>
+                </li>
+                <li class="each-item">
+                    <span>活动结束时间：</span>
+                    <time-picker title="请选择日期" yearstart="2018" yearend="2030" loadLazy="true" load-date-time="action.endTime"
+                        time-picker-result="action.endTime"></time-picker>
+                </li>
+                <li class="each-item">
+                    <span>活动地点：</span>
+                    <input type='text' placeholder="请输入具体活动地点" ng-model="action.position" />
+                </li>
+                <li class="each-item">
+                    <span>蓝牙设置：</span>
+                    <div class='bt'>
+                        <input type='number' placeholder='请输入Major' ng-model="action.major" style='border-right: 1px solid #f3f3f3;'>
+                        <input type='number' placeholder='请输入Minor' ng-model="action.minor">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

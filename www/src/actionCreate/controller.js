@@ -16,7 +16,7 @@ angular.module('starter.controllers')
         }
 
         $scope.typeList = {
-            list: [{ name: "聚会" }, { name: "沙龙" }, { name: "讲座" }],
+            list: homeService.getTypeList(),
             attrName: "name",
         }
 

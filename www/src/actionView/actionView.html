@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-nav-title>{{action.name}}</ion-nav-title>
+    <ion-content class='actionView'>
+        <div class='bg'>
+            <img ng-src={{action.img}} />
+        </div>
+
+        <div class='name'>{{action.name}}</div>
+        <div class='title'>活动信息</div>
+        <div class='action-content'>
+            <ul class="all-content">
+                <li class="each-item">
+                    <span>活动时间：{{action.startTime + ' ~ ' + action.endTime}}</span>
+                </li>
+                <li class="each-item">
+                        <span>主 办 人：{{action.host }}</span>
+                </li>
+                <li class="each-item">
+                        <span>联系电话：{{action.tel }}</span>
+                        <i class="icon ion-ios-telephone-outline" ng-click="callHost(action.tel)"></i>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

@@ -8,13 +8,27 @@ angular.module('starter.controllers')
         $scope.action = $stateParams.action;
 
 
+        $scope.goEdit = function() {
+            $state.go('tab.actionEdit',{action:$scope.action});
+        }
+
+        $scope.goView = function () {
+            $state.go('tab.actionView',{action:$scope.action});            
+        }
+
+        $scope.goParticipant = function () {
+            
+        }
+
         //蓝牙部分
         if (window.cordova) {
 
             $scope.isScanned = false;
 
-            var brIdentifier = 'estimote';
-            var brUuid = 'b9407f30-f5f8-466e-aff9-25556b57fe6d';
+            // var brIdentifier = 'estimote';
+            // var brUuid = 'b9407f30-f5f8-466e-aff9-25556b57fe6d';
+            var brIdentifier = '微信';
+            var brUuid = 'FDA50693-A4E2-4FB1-AFCF-C6EB07647825';
             var brMajor = null;
             var brMinor = null;
             var brNotifyEntryStateOnDisplay = true;
@@ -52,7 +66,7 @@ angular.module('starter.controllers')
                 for (var i = 0; i < data.beacons.length; i++) {
                     console.log(data.beacons);
                     if (data.beacons[i].major == $scope.action.major && data.beacons[i].minor == $scope.action.minor) {
-                        myNote.myNotice('找到蓝牙');
+                        myNote.myNotice('找到蓝牙，距离您'+data.beacons[i].accuracy+'米');
                         $scope.isScanned = true;
                     }
                 }

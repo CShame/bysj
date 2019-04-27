@@ -23,20 +23,20 @@ angular.module('starter.config')
         }
       })
 
-      .state('tab.about', {
-        url: '/about',
+      .state('tab.help', {
+        url: '/help',
         views: {
           'tab-home': {
-            templateUrl: 'src/about/about.html',
-            controller: 'AboutCtrl'
+            templateUrl: 'src/help/help.html',
+            controller: 'HelpCtrl'
           }
         }
       })
 
       .state('tab.actionDetail', {
         url: '/actionDetail',
-        params:{
-          action:null
+        params: {
+          action: null
         },
         views: {
           'tab-home': {
@@ -45,6 +45,33 @@ angular.module('starter.config')
           }
         }
       })
+
+      .state('tab.actionEdit', {
+        url: '/actionEdit',
+        params: {
+          action: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/actionEdit/actionEdit.html',
+            controller: 'ActionEditCtrl'
+          }
+        }
+      })
+
+      .state('tab.actionView', {
+        url: '/actionView',
+        params: {
+          action: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/actionView/actionView.html',
+            controller: 'ActionViewCtrl'
+          }
+        }
+      })
+
 
 
       .state('tab.person', {
@@ -61,7 +88,7 @@ angular.module('starter.config')
         url: '/create',
         views: {
           'tab-create': {
-            templateUrl: 'src/create/create.html',
+            templateUrl: 'src/actionCreate/create.html',
             controller: 'CreateCtrl'
           }
         }
