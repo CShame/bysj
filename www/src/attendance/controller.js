@@ -112,7 +112,7 @@ angular.module('starter.controllers')
                     for (var i = 0; i < data.beacons.length; i++) {
                         console.log(data.beacons);
                         if (data.beacons[i].major == $scope.action.major && data.beacons[i].minor == $scope.action.minor) {
-                            myNote.myNotice('找到蓝牙，距离您' + data.beacons[i].accuracy + '米');
+                            console.log('找到蓝呀',data.beacons[i].accuracy);
                             $scope.attendance.distance = data.beacons[i].accuracy;
                             $scope.isScanned = true;
                         }
