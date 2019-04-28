@@ -82,5 +82,53 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    border-radius: 0;
+    display: flex;
   }
+
+  .attendance-view .attendance-btn div{
+    width: 50%;
+    border-radius: 0;   
+  }
+
+
+  .attendance-view .reder_bg_f{
+    background: radial-gradient(center, rgba(0, 163, 244, 1) 0%, #11c1f3 75%);
+    height: 195px;
+    position: relative;
+    text-align: center;
+  }
+
+  .attendance-view .reder_bg_f img{
+    height: 90px;
+    margin-top: 20px;
+  }
+
+  .attendance-view .reder_bg_f p{
+    color: #fff;
+    margin: 0;
+  }
+
+  .attendance-view .reder_bg_f p:last-child{
+    font-size: 24px;
+    text-shadow: 4px 4px 4px #999;
+    padding: 10px;
+  }
+
+  .attendance-view .list{
+    margin-bottom: 0;
+  }
+
+  .attendance-view .list .item{
+    font-size: 12px;
+    border-color: #f2f5f8;
+    padding: 8px 12px;
+}
+
+.attendance-view .title{
+    font-size: 12px;
+    line-height: 36px;
+    height: 36px;
+    color: #777;
+    background: #e4e9ed;
+    padding: 0 10px;
+}

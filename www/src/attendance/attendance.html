@@ -1,12 +1,12 @@
 <ion-view>
     <ion-nav-title>签到</ion-nav-title>
     <ion-content class='attendance-view' scroll='false'>
-        <div class="rader_bg">
+        <div class="rader_bg" ng-show='!isScanned'>
             <div class="radar">
                 <div>
                     <div>
                         <div class="pro">
-                            <p>{{scanDescribe}}</p>
+                            <p>扫描中</p>
                         </div>
                     </div>
                 </div>
@@ -14,6 +14,41 @@
             </div>
         </div>
 
-        <div class='button button-calm attendance-btn' ng-click='punch()'>签到</div>
+        <div class='reder_bg_f' ng-show='isScanned'>
+            <img src="asset/img/zpf.png" />
+            <p>已经扫描到蓝牙</p>
+            <p>{{clock.now | date:'HH:mm:ss' }}</p>
+        </div>
+
+        <div class='title' ng-show="attendance.distance">签到信息</div>
+        <div class='list' ng-show="attendance.distance">
+            <div class='item'>
+                签到时间：{{attendance.time}}
+            </div>
+            <div class='item' ng-show="attendance.distance">
+                签到距离：{{'大约' + attendance.distance + 'm'}}
+            </div>
+        </div>
+
+        <div class='title'>活动信息</div>
+        <div class='list'>
+            <div class='item'>
+                活动名称：{{action.name}}
+            </div>
+            <div class='item'>
+                签到位置：{{action.position}}
+            </div>
+            <div class='item'>
+                开始时间：{{action.startTime}}
+            </div>
+            <div class='item'>
+                截止时间：{{action.endTime}}
+            </div>
+        </div>
+
+        <div class='attendance-btn' ng-show='isScanned && !attendance.time'>
+            <div class='button button-balanced' ng-click='reScan()'>重新定位</div>
+            <div class='button button-calm' ng-click='showConfirm()'>签到</div>
+        </div>
     </ion-content>
 </ion-view>
