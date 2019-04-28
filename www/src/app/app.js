@@ -1,5 +1,5 @@
 
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','starter.config','starter.directive'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','starter.config','starter.directive','ngCordova'])
 
 .run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
@@ -13,7 +13,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     }
 
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams, options) {
-      if(toState.url == "/home" || toState.url == "/chats" || toState.url == "/person"){ // 这三个页面不隐藏Tabs
+      if(toState.url == "/home" || toState.url == "/create" || toState.url == "/person"){ // 这三个页面不隐藏Tabs
           $rootScope.hideTabs = false;
       } else { // 其他页面英藏Tabs
           $rootScope.hideTabs = true;

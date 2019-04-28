@@ -13,25 +13,6 @@ angular.module('starter.config')
         templateUrl: 'src/templates/tabs.html'
       })
 
-      .state('tab.chats', {
-        url: '/chats',
-        views: {
-          'tab-chats': {
-            templateUrl: 'src/templates/tab-chats.html',
-            controller: 'ChatsCtrl'
-          }
-        }
-      })
-      .state('tab.chat-detail', {
-        url: '/chats/:chatId',
-        views: {
-          'tab-chats': {
-            templateUrl: 'src/templates/chat-detail.html',
-            controller: 'ChatDetailCtrl'
-          }
-        }
-      })
-
       .state('tab.home', {
         url: '/home',
         views: {
@@ -42,16 +23,93 @@ angular.module('starter.config')
         }
       })
 
-      .state('tab.about', {
-        url: '/about',
+      .state('tab.help', {
+        url: '/help',
         views: {
           'tab-home': {
-            templateUrl: 'src/about/about.html',
-            controller: 'AboutCtrl'
+            templateUrl: 'src/help/help.html',
+            controller: 'HelpCtrl'
           }
         }
       })
 
+      .state('tab.actionDetail', {
+        url: '/actionDetail',
+        params: {
+          action: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/actionDetail/actiondetail.html',
+            controller: 'ActionDetailCtrl'
+          }
+        }
+      })
+
+      .state('tab.actionEdit', {
+        url: '/actionEdit',
+        params: {
+          action: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/actionEdit/actionEdit.html',
+            controller: 'ActionEditCtrl'
+          }
+        }
+      })
+
+      .state('tab.actionView', {
+        url: '/actionView',
+        params: {
+          action: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/actionView/actionView.html',
+            controller: 'ActionViewCtrl'
+          }
+        }
+      })
+
+      .state('tab.participant', {
+        url: '/participant',
+        params: {
+          actionId: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/participant/participant.html',
+            controller: 'ParticipantCtrl'
+          }
+        }
+      })
+
+      .state('tab.attendance', {
+        url: '/attendance',
+        params: {
+          actionId: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/attendance/attendance.html',
+            controller: 'AttendanceCtrl'
+          }
+        }
+      })
+
+      .state('tab.table', {
+        url: '/table',
+        params: {
+          actionId: null
+        },
+        views: {
+          'tab-home': {
+            templateUrl: 'src/table/table.html',
+            controller: 'TableCtrl'
+          }
+        }
+      })
 
       .state('tab.person', {
         url: '/person',
@@ -59,6 +117,16 @@ angular.module('starter.config')
           'tab-person': {
             templateUrl: 'src/person/person.html',
             controller: 'PersonCtrl'
+          }
+        }
+      })
+
+      .state('tab.create', {
+        url: '/create',
+        views: {
+          'tab-create': {
+            templateUrl: 'src/actionCreate/create.html',
+            controller: 'CreateCtrl'
           }
         }
       })

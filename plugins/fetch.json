@@ -31,16 +31,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-ionic-webview": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-ionic-webview@^3.1.2"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
-    }
-  },
   "cordova-plugin-ionic-keyboard": {
     "source": {
       "type": "registry",
@@ -49,12 +39,12 @@
     "is_top_level": true,
     "variables": {}
   },
-  "com.unarin.cordova.beacon": {
+  "cordova-plugin-compat": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/petermetz/cordova-plugin-ibeacon.git"
+      "id": "cordova-plugin-compat@^1.1.0"
     },
-    "is_top_level": true,
+    "is_top_level": false,
     "variables": {}
   }
 }

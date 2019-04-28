@@ -60,7 +60,7 @@ gulp.task('allJs', function(done) {
         .pipe(ngAnnotate({ add: true }))
         .pipe(sourcemaps.init())
         .pipe(concat('all.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./www/dist/'))
         .on('end', done);

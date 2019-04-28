@@ -1,6 +1,32 @@
 <ion-view>
-    <ion-nav-title>我的</ion-nav-title>
-    <ion-content class='person'>
+    <!-- <ion-nav-title>我的</ion-nav-title> -->
+    <ion-content class='person-view'>
+        <a class="item item-avatar  item-icon-right account" href="#/tab/person/update">
+            <div class='person-img'>
+                <div ng-style='personStyle.imgStyle'></div>
+            </div>
+            <div>
+                <p style="line-height: 40px">{{person.name}}</p>
+            </div>
+            <i class="icon ion-ios-arrow-right"></i>
+        </a>
 
+        <div class="list">
+            <a class="item item-icon-left item-icon-right" ng-click='goAbout()'>
+                <i class="icon ion-help-circled"></i>
+                使用说明
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" ng-click='goAbout()'>
+                <i class="icon ion-android-alert"></i>
+                关于
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+            <a class="item item-icon-left item-icon-right" ng-click='exit()'>
+                <i class="icon ion-android-settings"></i>
+                退出登录
+                <i class="icon ion-ios-arrow-right"></i>
+            </a>
+        </div>
     </ion-content>
 </ion-view>

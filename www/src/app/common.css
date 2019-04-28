@@ -20,6 +20,10 @@
     color: white !important;
 } */
 
+ion-header-bar{
+    background-image: none !important;
+}
+
 .tabs{
     border-top: 1px solid #d9dee2 !important;
     background-image: none;

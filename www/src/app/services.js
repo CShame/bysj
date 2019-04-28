@@ -115,7 +115,7 @@ angular.module('starter.services', [])
     return $window.localStorage.getItem(key) || null;
   };
   var removeAll = function () {
-    var exclude = ['mode', 'last_update_files', 'last_update_time', 'manifest'];
+    var exclude = ['mode', 'last_update_files', 'last_update_time', 'manifest', 'userList'];
     for (var item in $window.localStorage) {
       if (exclude.indexOf(item) == -1) {
         deleteItem(item);

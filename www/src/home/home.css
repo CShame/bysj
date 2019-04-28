@@ -31,6 +31,13 @@
     height: 100px;
     width: 130px;
 }
+.home .each-action .img{
+    height: 100px;
+    width: 130px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 .home .each-action .right{
     flex: 1;

@@ -1,0 +1,153 @@
+/*ʱ��ѡ������ʽ*/
+
+@keyframes ttanimations {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.datetimeactive {
+    -webkit-animation-name: ttanimations;
+    animation-name: ttanimations;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+.pickerContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.pickerContainer .main {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 35%;
+    height: 370px;
+    border-radius: 3px;
+}
+
+.pickerContainer .header {
+  height: 50px;
+  border-bottom: 1px solid #4BC2FE;
+  text-align: center;
+  line-height: 50px;
+  color:#1FB5FF;
+  font-size:15px;
+  background: #f9f9f9;
+  font-family:"Source Han Sans CN Light";
+}
+
+.pickerContainer .dateContent, .pickerContainer .timeContent, .pickerContainer .yearContent, .pickerContainer .monthContent {
+    height: 165px;
+}
+
+.pickerContainer .body {
+  position: relative;
+  height:175px;
+  background: #F9F9F9;
+}
+
+.pickerContainer .body::after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+}
+
+.pickerContainer .body_center_highlight {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.pickerContainer .body_center_highlight::before {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    content: ' ';
+    margin-top: 0px;
+}
+
+.pickerContainer .body_center_highlight::after {
+    position: absolute;
+    display: block;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    content: ' ';
+    margin-bottom: 0px;
+}
+
+.pickerContainer ul li {
+  height: 60px;
+  width: 100%;
+  line-height: 50px;
+  color: #999999;
+  text-align: center;
+  font-size:15px;
+  font-family:"Roboto Light";
+}
+
+.pickerContainer .footer {
+  border-top: 1px solid #D2D2D2;
+  height: 50px;
+  background: #F9F9F9;
+}
+
+.pickerContainer .footer::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 44px;
+  left: 50%;
+  background-color: #D2D2D2;
+}
+
+.pickerContainer span {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+  line-height: 50px;
+  color:black;
+  font-size:15px;
+  font-family:"Source Han Sans CN Light";
+}
+
+.optionSelected{
+  color:#353535 !important;
+  font-size:15px;
+  font-family:"Roboto Light";
+}
+
+
+.selectedLineYear{
+  top:60px;
+  left:10%;
+  width:80%;
+  height:50px;
+  border-top:1px solid #1FB5FF;
+  border-bottom:1px solid #1FB5FF;
+  position: absolute;
+}
