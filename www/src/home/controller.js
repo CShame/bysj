@@ -3,8 +3,8 @@ angular.module('starter.controllers')
 
         $scope.navList = [
             { id: 0, name: '全部', acticved: 'true' },
-            { id: 1, name: '报名中', acticved: 'false' },
-            { id: 2, name: '报名结束', acticved: 'false' }
+            { id: 1, name: '签到中', acticved: 'false' },
+            { id: 2, name: '签到结束', acticved: 'false' }
         ]
 
         $scope.actionList = [
