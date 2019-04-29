@@ -50,7 +50,9 @@ angular.module('starter.controllers')
       }
 
       $scope.loginIn = function (valid) {
+        console.log(valid,$scope.user);
         if ($scope.user.UserAccount == undefined && $scope.user.Password == undefined) {
+          console.log(valid,$scope.user);
           myNote.myNotice("用户名和密码不能为空!");
           return;
         }
@@ -69,6 +71,7 @@ angular.module('starter.controllers')
         });
       };
 
+      
       $scope.cancel = function () {
         $scope.modal.hide();
       };
@@ -76,6 +79,7 @@ angular.module('starter.controllers')
 
       // 跳转到注册
       $scope.registerUser = function () {
+        console.log('register');
         $state.go('register');
       }
 
